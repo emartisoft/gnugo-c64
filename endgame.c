@@ -209,7 +209,7 @@ void endgame(void)
   do {
       printf("dEAD PIECE? ");
       scanf("%s", an);
-      if (strcmp(an, "stop"))
+      if (strcmp(an, "stop") && strcmp(an, "STOP"))
         {
   	 getij(an, &i, &j);
  	 if (p[i][j] == mymove)
@@ -262,7 +262,7 @@ printf("jUST BEFORE SECOND BFSLIST.\n");
      {
       printf("yOUR PIECE? ");
       scanf("%s", an);
-      if (strcmp(an, "stop"))
+      if (strcmp(an, "stop") && strcmp(an, "STOP"))
         {
  	getij(an, &i, &j);
  	p[i][j] = umove;
@@ -275,7 +275,7 @@ printf("jUST BEFORE SECOND BFSLIST.\n");
      {
       printf("mY PIECE? ");
       scanf("%s", an);
-      if (strcmp(an, "stop"))
+      if (strcmp(an, "stop") && strcmp(an, "STOP"))
         {
  	getij(an, &i, &j);
  	p[i][j] = mymove;

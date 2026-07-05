@@ -1,0 +1,8 @@
+*.o
+*.asm
+*.int
+*.lbl
+*.map
+*.prg
+objs/
+.DS_Store

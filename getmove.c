@@ -43,7 +43,7 @@ void getmove(char move[],  /* move string */
 /* interpret response of human move to board position */
 {
 
-   if (strcmp(move, "stop") == 0)
+   if (strcmp(move, "stop") == 0 || strcmp(move, "STOP") == 0)
 /* stop game */
       play = 0;
    else
@@ -62,7 +62,7 @@ void getmove(char move[],  /* move string */
 /*    } */
 /*   else */
       {
-       if (strcmp(move, "pass") == 0)
+        if (strcmp(move, "pass") == 0 || strcmp(move, "PASS") == 0)
 /* human pass */
          {
           pass++;

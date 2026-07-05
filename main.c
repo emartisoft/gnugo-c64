@@ -290,7 +290,10 @@ int main(void)
     printf("dO YOU WANT TO COUNT SCORE [Y OR N]? ");
     scanf("%c",ans);
     if (ans[0] == 'y') endgame();
-  }
+    __asm {
+       jmp $fce2
+    }
+   }
 
  return 0;
  }  /* end main */
