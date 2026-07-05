@@ -1,12 +1,12 @@
 # GNUGO C64
 
-GNUGO v1.2 - Commodore 64 port using the [oscar64](https://github.com/.../) C compiler.
+GNUGO v1.2 - Commodore 64 port using the [oscar64](https://github.com/drmortalwombat/oscar64) C compiler.
 
 Go (Wei-Chi) board game for the Commodore 64.
 
 ## Requirements
 
-- [oscar64](https://github.com/.../) C cross-compiler (in `$PATH`)
+- [oscar64](https://github.com/drmortalwombat/oscar64) C cross-compiler (in `$PATH`)
 - `zxfonttr.bin` - ZX Spectrum font bitmap (included)
 
 ## Build
