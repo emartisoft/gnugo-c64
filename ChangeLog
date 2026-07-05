@@ -1,0 +1,73 @@
+Sun Jul 05 2026  emarti, Murat Ozdemir
+
+	* Ported to C64 using oscar64 compiler with -Os flag for minimal PRG size
+	
+	* Added fontdata.c - custom font initialization for C64 PETSCII graphics
+	
+	* Updated main.c:
+	  - Added c64/memmap.h include and fontinit() extern
+	  - Added #pragma region/stacksize/heapsize for memory layout
+	  - Replaced argc/argv with void signature
+	  - Added C64 screen initialization (CHR$ codes, PETSCII mode)
+	  - Disabled showinst(), save/restore game, and handicap prompts
+	  - Removed handicap selection (always 0 for C64)
+	  - Used clock() instead of time() for random seed
+	
+	* Updated gnugo.h: commented out showinst() declaration (disabled for C64)
+	
+	* Updated showinst.c: wrapped entire function in comment block (disabled)
+	
+	* Updated showbord.c: replaced spaced board display with compact version
+	  to fit C64 40-column screen; side info uses compact labels (U:W, C:B, etc.)
+	
+	* Updated getmove.c: disabled save command (FILE I/O not practical on C64)
+	
+	* Updated count.c: converted from recursive to iterative (stack-based)
+	  to reduce C64 stack pressure; added CSTACK_MAX/cstack/csp
+	
+	* Updated findnext.c: converted from recursive to iterative (stack-based);
+	  made fval static; added fstack/fsp
+	
+	* Updated findopen.c: converted from recursive to iterative (stack-based);
+	  added OSTACK_MAX/ostack/osp
+	
+	* Updated endgame.c: moved mymovelist/umovelist from local to static
+	  file-scope arrays to reduce stack usage
+	
+	* Updated Makefile: added fontdata.c to SRC; added C64 target (make c64)
+	  building gnugo.prg via oscar64 -Os
+	
+	* Fixed oscar64 compiler warnings:
+	  - matchpat.c: initialized ti/tj to 0 (uninitialized variable)
+	  - findcolr.c: initialized result to 0 (uninitialized variable)
+	  - endgame.c: replaced 2D array p[][] with flat pointer pp in
+	    createlist to avoid "Undefined constant pointer arithmetic"
+	    and inlined node() macro as i*BSIZE+j
+
+Fri Oct 20 1995  Frank Pursel
+
+	* Fixed bug in findcolor.c
+
+Tue Oct 17 13:29:17 1995  Man Li
+
+	* Rewrote findcolor.c to check color of four neighbors
+
+Fri Sep 17 1995  Frank Pursel
+
+	* Added new private functions node2ij, node, createlist, enqueue,
+	dequeue, bfslist in file endgame.c
+
+	* Modified function endgame to delete connected dead stones as
+	group and improve the 'fill' algorithm in file endgame.c
+
+Mon Sep 11 15:54:21 1995  Man Li
+
+	* Changed random function to system rand function
+
+	* Changed function declaration and prototype to ISO standard
+
+	* Added new header file gnugo.h
+
+	* Changed patterns.c to patterns.h
+
+        * Removed files random.c, seed.c

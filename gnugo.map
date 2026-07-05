@@ -1,0 +1,374 @@
+sections
+0a00 - 5427 : DATA, code
+5427 - 683c : DATA, data
+683c - 9a7a : BSS, bss
+9a80 - c1f0 : HEAP, heap
+c1f0 - cf5c : STACK, stack
+00f7 - 00f7 : ZEROPAGE, zeropage
+0801 - 0853 : DATA, startup
+cffa - d000 : SSTACK, sstack
+cffa - cffa : SSTACK, puts@stack
+cfea - cffa : SSTACK, nformi@stack
+cfea - cffa : SSTACK, nforml@stack
+cfa3 - cfea : SSTACK, printf@stack
+cffa - cffa : SSTACK, clock@stack
+cf99 - cfa3 : SSTACK, showboard@stack
+cffa - cffa : SSTACK, getchar@stack
+cffa - cffa : SSTACK, hexch@stack
+cfcd - cffa : SSTACK, scanf@stack
+cffa - cffa : SSTACK, countlib@stack
+cff0 - cffa : SSTACK, eval@stack
+cffa - cffa : SSTACK, initmark@stack
+cffa - cffa : SSTACK, fval@stack
+cffa - cffa : SSTACK, fioe@stack
+cffa - cffa : SSTACK, rand@stack
+cffa - cffa : SSTACK, opening@stack
+cffa - cffa : SSTACK, openregion@stack
+cfaa - cff0 : SSTACK, genmove@stack
+cffa - cffa : SSTACK, strcmp@stack
+cffa - cffa : SSTACK, getij@stack
+cfa3 - cfa3 : SSTACK, getmove@stack
+cfee - cff0 : SSTACK, examboard@stack
+cffa - cffa : SSTACK, createlist@stack
+cffa - cffa : SSTACK, enqueue@stack
+cff6 - cffa : SSTACK, bfslist@stack
+cf5c - cf99 : SSTACK, main@stack
+
+regions
+0a00 - c1f0 : 683c, 907a, main
+00f7 - 00ff : 0000, 0000, zeropage
+0801 - 0880 : 0853, 0052, startup
+
+objects
+00f7 - 00f7 : ZeroStart, START:zeropage
+00f7 - 00f7 : ZeroEnd, END:zeropage
+0801 - 0853 : startup, NATIVE_CODE:startup
+0a00 - 138a : main, NATIVE_CODE:code
+138a - 1ac0 : printf, NATIVE_CODE:code
+1ac0 - 1ac8 : puts@proxy, NATIVE_CODE:code
+1ac8 - 1b0f : puts, NATIVE_CODE:code
+1b0f - 1c24 : nformi, NATIVE_CODE:code
+1c24 - 1d60 : nforml, NATIVE_CODE:code
+1d60 - 1d63 : *, DATA:code
+1d63 - 1d74 : clock, NATIVE_CODE:code
+1d74 - 1fcc : showboard, NATIVE_CODE:code
+1fcc - 1fce : *, DATA:code
+1fce - 1fe7 : *, DATA:code
+1fe7 - 1feb : *, DATA:code
+1feb - 1fee : *, DATA:code
+1fee - 1ff0 : *, DATA:code
+1ff0 - 1ff2 : *, DATA:code
+1ff2 - 1ff4 : *, DATA:code
+1ff4 - 1ff6 : *, DATA:code
+1ff6 - 1ff8 : *, DATA:code
+1ff8 - 1ffa : *, DATA:code
+1ffa - 1ffc : *, DATA:code
+1ffc - 1ffe : *, DATA:code
+1ffe - 2000 : *, DATA:code
+2000 - 2002 : *, DATA:code
+2002 - 2004 : *, DATA:code
+2004 - 2009 : *, DATA:code
+2009 - 200e : *, DATA:code
+200e - 2015 : *, DATA:code
+2015 - 201e : *, DATA:code
+201e - 2024 : *, DATA:code
+2024 - 203b : *, DATA:code
+203b - 27ce : scanf, NATIVE_CODE:code
+27ce - 27dc : getchar, NATIVE_CODE:code
+27dc - 2815 : hexch, NATIVE_CODE:code
+2815 - 2819 : *, DATA:code
+2819 - 2829 : genmove@proxy, NATIVE_CODE:code
+2829 - 3aca : genmove, NATIVE_CODE:code
+3aca - 3b56 : eval, NATIVE_CODE:code
+3b56 - 3b62 : countlib@proxy, NATIVE_CODE:code
+3b62 - 3e3a : countlib, NATIVE_CODE:code
+3e3a - 3e61 : initmark, NATIVE_CODE:code
+3e61 - 3e6f : fval@proxy, NATIVE_CODE:code
+3e6f - 3f06 : fval, NATIVE_CODE:code
+3f06 - 3f12 : fioe@proxy, NATIVE_CODE:code
+3f12 - 40ba : fioe, NATIVE_CODE:code
+40ba - 41ef : opening, NATIVE_CODE:code
+41ef - 420d : rand, NATIVE_CODE:code
+420d - 4215 : openregion@proxy, NATIVE_CODE:code
+4215 - 428a : openregion, NATIVE_CODE:code
+428a - 429f : *, DATA:code
+429f - 42b3 : *, DATA:code
+42b3 - 42b5 : *, DATA:code
+42b5 - 42c1 : *, DATA:code
+42c1 - 42c4 : *, DATA:code
+42c4 - 44b4 : getmove, NATIVE_CODE:code
+44b4 - 44c4 : strcmp@proxy, NATIVE_CODE:code
+44c4 - 44f1 : strcmp, NATIVE_CODE:code
+44f1 - 44f6 : *, DATA:code
+44f6 - 44fb : *, DATA:code
+44fb - 4513 : getij@proxy, NATIVE_CODE:code
+4513 - 45c1 : getij, NATIVE_CODE:code
+45c1 - 45dc : *, DATA:code
+45dc - 46f2 : examboard, NATIVE_CODE:code
+46f2 - 46fe : *, DATA:code
+46fe - 4713 : *, DATA:code
+4713 - 4739 : *, DATA:code
+4739 - 473c : *, DATA:code
+473c - 476b : *, DATA:code
+476b - 47a6 : *, DATA:code
+47a6 - 47de : *, DATA:code
+47de - 47e7 : *, DATA:code
+47e7 - 4821 : *, DATA:code
+4821 - 485f : *, DATA:code
+485f - 4874 : *, DATA:code
+4874 - 4895 : *, DATA:code
+4895 - 4a86 : createlist, NATIVE_CODE:code
+4a86 - 4a93 : *, DATA:code
+4a93 - 4a9d : bfslist@proxy, NATIVE_CODE:code
+4a9d - 4c44 : bfslist, NATIVE_CODE:code
+4c44 - 4cce : enqueue, NATIVE_CODE:code
+4cce - 4d10 : *, DATA:code
+4d10 - 4d1f : *, DATA:code
+4d1f - 4d48 : *, DATA:code
+4d48 - 4d63 : *, DATA:code
+4d63 - 4d70 : *, DATA:code
+4d70 - 4d7b : *, DATA:code
+4d7b - 4d9b : *, DATA:code
+4d9b - 4db9 : *, DATA:code
+4db9 - 4df1 : mul16by8, NATIVE_CODE:code
+4df1 - 4e27 : mul32by8, NATIVE_CODE:code
+4e27 - 4e6c : freg, NATIVE_CODE:code
+4e6c - 4f59 : faddsub, NATIVE_CODE:code
+4f59 - 4ff3 : crt_fmul, NATIVE_CODE:code
+4ff3 - 5021 : crt_fmul8, NATIVE_CODE:code
+5021 - 50cf : crt_fdiv, NATIVE_CODE:code
+50cf - 5111 : mul16, NATIVE_CODE:code
+5111 - 5115 : divs16@proxy, NATIVE_CODE:code
+5115 - 5130 : divs16, NATIVE_CODE:code
+5130 - 513e : negaccu, NATIVE_CODE:code
+513e - 514c : negtmp, NATIVE_CODE:code
+514c - 51d7 : divmod, NATIVE_CODE:code
+51d7 - 51db : mods16@proxy, NATIVE_CODE:code
+51db - 51fa : mods16, NATIVE_CODE:code
+51fa - 51fe : divmods16@proxy, NATIVE_CODE:code
+51fe - 5228 : divmods16, NATIVE_CODE:code
+5228 - 5236 : negtmpb, NATIVE_CODE:code
+5236 - 5282 : f32_to_i16, NATIVE_CODE:code
+5282 - 52a0 : sint16_to_float, NATIVE_CODE:code
+52a0 - 52c9 : uint16_to_float, NATIVE_CODE:code
+52e7 - 53ce : divmod32, NATIVE_CODE:code
+53ce - 53df : store32, NATIVE_CODE:code
+53df - 53f0 : load32, NATIVE_CODE:code
+53f0 - 53fb : openregion@proxy, NATIVE_CODE:code
+53fb - 540a : fioe@proxy, NATIVE_CODE:code
+540a - 5411 : mods16@proxy, NATIVE_CODE:code
+5411 - 541c : freg@proxy, NATIVE_CODE:code
+541c - 5427 : freg@proxy, NATIVE_CODE:code
+5427 - 5428 : spentry, DATA:data
+5428 - 5c28 : zxfonttr_bin, DATA:data
+5c28 - 5c44 : fround5, DATA:data
+5c44 - 5c46 : seed, DATA:data
+5c46 - 5c62 : tpow10, DATA:data
+5c62 - 5e30 : tree, DATA:data
+5e30 - 5e70 : trf, DATA:data
+5e70 - 6800 : pat, DATA:data
+6800 - 6802 : queinit, DATA:data
+6802 - 6804 : size, DATA:data
+6804 - 683c : bitshift, DATA:data
+683c - 683c : BSSStart, START:bss
+683c - 684e : opn, DATA:bss
+684e - 69b7 : p, DATA:bss
+69b7 - 69b9 : mk, DATA:bss
+69b9 - 69bb : uk, DATA:bss
+69bb - 69bd : play, DATA:bss
+69bd - 69bf : pass, DATA:bss
+69bf - 69c1 : mik, DATA:bss
+69c1 - 69c3 : mjk, DATA:bss
+69c3 - 69c5 : uik, DATA:bss
+69c5 - 69c7 : ujk, DATA:bss
+69c7 - 69c9 : umove, DATA:bss
+69c9 - 69cb : mymove, DATA:bss
+69cb - 69cd : lib, DATA:bss
+69cd - 6b36 : ml, DATA:bss
+6b36 - 6b38 : csp, DATA:bss
+6b38 - 6e58 : cstack, DATA:bss
+6e58 - 6fc1 : l, DATA:bss
+6fc1 - 712a : ma, DATA:bss
+712a - 712c : osp, DATA:bss
+712c - 744c : ostack, DATA:bss
+744c - 744e : fsp, DATA:bss
+744e - 776e : fstack, DATA:bss
+776e - 7770 : cnd, DATA:bss
+7770 - 7772 : mtype, DATA:bss
+7772 - 858c : mymovelist, DATA:bss
+858c - 93a6 : umovelist, DATA:bss
+93a6 - 9678 : color, DATA:bss
+9678 - 97a4 : que, DATA:bss
+97a4 - 97a6 : pe, DATA:bss
+97a6 - 97a8 : pstart, DATA:bss
+97a8 - 9a7a : listpt, DATA:bss
+9a7a - 9a7a : BSSEnd, END:bss
+cf5c - cf6e : main@stack, BSS:main@stack
+cf5c - cf5c : StackEnd, END:stack
+cf6e - cf76 : color, BSS:main@stack
+cf76 - cf78 : j, BSS:main@stack
+cf78 - cf7a : i, BSS:main@stack
+cf7b - cf85 : an, BSS:main@stack
+cf85 - cf8a : ans, BSS:main@stack
+cf8a - cf94 : move, BSS:main@stack
+cf94 - cf96 : j, BSS:main@stack
+cf96 - cf98 : i, BSS:main@stack
+cf99 - cfa3 : showboard@stack, BSS:showboard@stack
+cfa3 - cfb0 : printf@stack, BSS:printf@stack
+cfaa - cfe0 : genmove@stack, BSS:genmove@stack
+cfb0 - cfb8 : si, BSS:printf@stack
+cfb8 - cfea : buff, BSS:printf@stack
+cfcd - cfda : scanf@stack, BSS:scanf@stack
+cfda - cffa : pat, BSS:scanf@stack
+cfe0 - cfe6 : tj, BSS:genmove@stack
+cfe6 - cfec : ti, BSS:genmove@stack
+cfea - cffa : buffer, BSS:nformi@stack
+cfea - cffa : buffer, BSS:nforml@stack
+cfec - cfee : tj, BSS:genmove@stack
+cfee - cff0 : examboard@stack, BSS:examboard@stack
+cfee - cff0 : ti, BSS:genmove@stack
+cff0 - cffa : eval@stack, BSS:eval@stack
+cff6 - cff8 : v, BSS:bfslist@stack
+cff8 - cffa : u, BSS:bfslist@stack
+cffa - d000 : sstack, STACK:sstack
+
+objects by size
+2829 (12a1) : genmove, NATIVE_CODE:code
+7772 (0e1a) : mymovelist, DATA:bss
+858c (0e1a) : umovelist, DATA:bss
+5e70 (0990) : pat, DATA:data
+0a00 (098a) : main, NATIVE_CODE:code
+5428 (0800) : zxfonttr_bin, DATA:data
+203b (0793) : scanf, NATIVE_CODE:code
+138a (0736) : printf, NATIVE_CODE:code
+6b38 (0320) : cstack, DATA:bss
+712c (0320) : ostack, DATA:bss
+744e (0320) : fstack, DATA:bss
+3b62 (02d8) : countlib, NATIVE_CODE:code
+93a6 (02d2) : color, DATA:bss
+97a8 (02d2) : listpt, DATA:bss
+1d74 (0258) : showboard, NATIVE_CODE:code
+4895 (01f1) : createlist, NATIVE_CODE:code
+42c4 (01f0) : getmove, NATIVE_CODE:code
+5c62 (01ce) : tree, DATA:data
+3f12 (01a8) : fioe, NATIVE_CODE:code
+4a9d (01a7) : bfslist, NATIVE_CODE:code
+684e (0169) : p, DATA:bss
+69cd (0169) : ml, DATA:bss
+6e58 (0169) : l, DATA:bss
+6fc1 (0169) : ma, DATA:bss
+1c24 (013c) : nforml, NATIVE_CODE:code
+40ba (0135) : opening, NATIVE_CODE:code
+9678 (012c) : que, DATA:bss
+45dc (0116) : examboard, NATIVE_CODE:code
+1b0f (0115) : nformi, NATIVE_CODE:code
+4e6c (00ed) : faddsub, NATIVE_CODE:code
+52e7 (00e7) : divmod32, NATIVE_CODE:code
+4513 (00ae) : getij, NATIVE_CODE:code
+5021 (00ae) : crt_fdiv, NATIVE_CODE:code
+4f59 (009a) : crt_fmul, NATIVE_CODE:code
+3e6f (0097) : fval, NATIVE_CODE:code
+3aca (008c) : eval, NATIVE_CODE:code
+514c (008b) : divmod, NATIVE_CODE:code
+4c44 (008a) : enqueue, NATIVE_CODE:code
+4215 (0075) : openregion, NATIVE_CODE:code
+0801 (0052) : startup, NATIVE_CODE:startup
+5236 (004c) : f32_to_i16, NATIVE_CODE:code
+1ac8 (0047) : puts, NATIVE_CODE:code
+4e27 (0045) : freg, NATIVE_CODE:code
+50cf (0042) : mul16, NATIVE_CODE:code
+5e30 (0040) : trf, DATA:data
+27dc (0039) : hexch, NATIVE_CODE:code
+4db9 (0038) : mul16by8, NATIVE_CODE:code
+6804 (0038) : bitshift, DATA:data
+4df1 (0036) : mul32by8, NATIVE_CODE:code
+cfaa (0036) : genmove@stack, BSS:genmove@stack
+cfb8 (0032) : buff, BSS:printf@stack
+4ff3 (002e) : crt_fmul8, NATIVE_CODE:code
+44c4 (002d) : strcmp, NATIVE_CODE:code
+51fe (002a) : divmods16, NATIVE_CODE:code
+52a0 (0029) : uint16_to_float, NATIVE_CODE:code
+3e3a (0027) : initmark, NATIVE_CODE:code
+cfda (0020) : pat, BSS:scanf@stack
+51db (001f) : mods16, NATIVE_CODE:code
+41ef (001e) : rand, NATIVE_CODE:code
+5282 (001e) : sint16_to_float, NATIVE_CODE:code
+5c28 (001c) : fround5, DATA:data
+5c46 (001c) : tpow10, DATA:data
+5115 (001b) : divs16, NATIVE_CODE:code
+44fb (0018) : getij@proxy, NATIVE_CODE:code
+683c (0012) : opn, DATA:bss
+cf5c (0012) : main@stack, BSS:main@stack
+1d63 (0011) : clock, NATIVE_CODE:code
+53ce (0011) : store32, NATIVE_CODE:code
+53df (0011) : load32, NATIVE_CODE:code
+2819 (0010) : genmove@proxy, NATIVE_CODE:code
+44b4 (0010) : strcmp@proxy, NATIVE_CODE:code
+cfea (0010) : buffer, BSS:nformi@stack
+cfea (0010) : buffer, BSS:nforml@stack
+53fb (000f) : fioe@proxy, NATIVE_CODE:code
+27ce (000e) : getchar, NATIVE_CODE:code
+3e61 (000e) : fval@proxy, NATIVE_CODE:code
+5130 (000e) : negaccu, NATIVE_CODE:code
+513e (000e) : negtmp, NATIVE_CODE:code
+5228 (000e) : negtmpb, NATIVE_CODE:code
+cfa3 (000d) : printf@stack, BSS:printf@stack
+cfcd (000d) : scanf@stack, BSS:scanf@stack
+3b56 (000c) : countlib@proxy, NATIVE_CODE:code
+3f06 (000c) : fioe@proxy, NATIVE_CODE:code
+53f0 (000b) : openregion@proxy, NATIVE_CODE:code
+5411 (000b) : freg@proxy, NATIVE_CODE:code
+541c (000b) : freg@proxy, NATIVE_CODE:code
+4a93 (000a) : bfslist@proxy, NATIVE_CODE:code
+cf7b (000a) : an, BSS:main@stack
+cf8a (000a) : move, BSS:main@stack
+cf99 (000a) : showboard@stack, BSS:showboard@stack
+cff0 (000a) : eval@stack, BSS:eval@stack
+1ac0 (0008) : puts@proxy, NATIVE_CODE:code
+420d (0008) : openregion@proxy, NATIVE_CODE:code
+cf6e (0008) : color, BSS:main@stack
+cfb0 (0008) : si, BSS:printf@stack
+540a (0007) : mods16@proxy, NATIVE_CODE:code
+cfe0 (0006) : tj, BSS:genmove@stack
+cfe6 (0006) : ti, BSS:genmove@stack
+cffa (0006) : sstack, STACK:sstack
+cf85 (0005) : ans, BSS:main@stack
+5111 (0004) : divs16@proxy, NATIVE_CODE:code
+51d7 (0004) : mods16@proxy, NATIVE_CODE:code
+51fa (0004) : divmods16@proxy, NATIVE_CODE:code
+5c44 (0002) : seed, DATA:data
+6800 (0002) : queinit, DATA:data
+6802 (0002) : size, DATA:data
+69b7 (0002) : mk, DATA:bss
+69b9 (0002) : uk, DATA:bss
+69bb (0002) : play, DATA:bss
+69bd (0002) : pass, DATA:bss
+69bf (0002) : mik, DATA:bss
+69c1 (0002) : mjk, DATA:bss
+69c3 (0002) : uik, DATA:bss
+69c5 (0002) : ujk, DATA:bss
+69c7 (0002) : umove, DATA:bss
+69c9 (0002) : mymove, DATA:bss
+69cb (0002) : lib, DATA:bss
+6b36 (0002) : csp, DATA:bss
+712a (0002) : osp, DATA:bss
+744c (0002) : fsp, DATA:bss
+776e (0002) : cnd, DATA:bss
+7770 (0002) : mtype, DATA:bss
+97a4 (0002) : pe, DATA:bss
+97a6 (0002) : pstart, DATA:bss
+cf76 (0002) : j, BSS:main@stack
+cf78 (0002) : i, BSS:main@stack
+cf94 (0002) : j, BSS:main@stack
+cf96 (0002) : i, BSS:main@stack
+cfec (0002) : tj, BSS:genmove@stack
+cfee (0002) : examboard@stack, BSS:examboard@stack
+cfee (0002) : ti, BSS:genmove@stack
+cff6 (0002) : v, BSS:bfslist@stack
+cff8 (0002) : u, BSS:bfslist@stack
+5427 (0001) : spentry, DATA:data
+00f7 (0000) : ZeroStart, START:zeropage
+00f7 (0000) : ZeroEnd, END:zeropage
+683c (0000) : BSSStart, START:bss
+9a7a (0000) : BSSEnd, END:bss
+cf5c (0000) : StackEnd, END:stack
