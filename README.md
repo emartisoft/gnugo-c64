@@ -26,6 +26,10 @@ LOAD"GNUGO.PRG",8,1
 RUN
 ```
 
+## Screenshot
+
+![go-c64 screenshot](go-c64.png)
+
 ### Controls
 
 | Command | Action |
