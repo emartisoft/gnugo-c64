@@ -1,3 +1,36 @@
+Mon Jul 06 2026  emarti, Murat Ozdemir
+
+	* Rewrote showbord.c board rendering:
+	  - Unified single 19x19 loop (was 7 separate sections), 323→106 lines
+	  - ASCII edge/corner characters: top=& bottom=* left=, right=(
+	  - Corners: % (top-left), ' (top-right), + (bottom-left), ) (bottom-right)
+	  - Empty board positions: ! (was PETSCII $7B)
+	  - Star points: - (was +)
+	  - Stone display: WHITE=$ BLACK=# (was O/X)
+	  - Board rendering color 0x09 (light blue), default 0x0F (light gray)
+	  - Color RAM for empty positions uses 0x09 (was 0x0F)
+	  - Case-swapped all printf strings for C64 lowercase PETSCII mode
+	  - Status line: removed comma between You/Computer scores
+	  - "Computer move:" on separate line below score
+
+	* Fixed scoring bug in exambord.c:
+	  - ++mk/++uk were swapped; user captures now correctly increment uk,
+	    computer captures increment mk
+
+	* Updated main.c:
+	  - "Thinking..." printed before genmove() during computer's turn
+	  - pass/stop input now case-insensitive (accepts both "pass" and "PASS")
+	  - After game end, jmp $fce2 warm reset to return to C64 BASIC
+	  - Case-swapped all printf strings for PETSCII lowercase mode
+	  - "computer move:" promoted to own line, comma removed from score line
+
+	* Updated getmove.c:
+	  - pass/stop comparison case-insensitive
+
+	* Added .gitignore for build artifacts (*.asm, *.int, *.lbl, *.map, *.prg)
+
+	* Updated Makefile: added clean target
+
 Sun Jul 05 2026  emarti, Murat Ozdemir
 
 	* Ported to C64 using oscar64 compiler with -Os flag for minimal PRG size
